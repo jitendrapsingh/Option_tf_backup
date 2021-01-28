@@ -40,7 +40,7 @@ pipeline {
 			  sh '''
 			  set +x
 			  PATH=/usr/local/bin
-			  terraform plan -var "REGION=$REGION" -var "ACCESS_KEY=$ACCESS_KEY" -var "SECRET_KEY=$SECRET_KEY" -var "Plan_Name=$Plan_Name" -var "VAULT_NAME=$VAULT_NAME" -var "Rule_Name=$Rule_Name" -var "IAM_Role=$IAM_Role" -var "selection_tag=$selection_tag" -var "Resource_Name=$Resource_Name"
+			  terraform plan -out tfplan  -var "REGION=$REGION" -var "ACCESS_KEY=$ACCESS_KEY" -var "SECRET_KEY=$SECRET_KEY" -var "Plan_Name=$Plan_Name" -var "VAULT_NAME=$VAULT_NAME" -var "Rule_Name=$Rule_Name" -var "IAM_Role=$IAM_Role" -var "selection_tag=$selection_tag" -var "Resource_Name=$Resource_Name"
 			  terraform show -no-color tfplan > tfplan.txt'''
                 }
            }
