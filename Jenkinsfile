@@ -8,7 +8,7 @@ properties([  parameters([
   string (defaultValue: '', description: 'Please type Resource Name', name: 'Resource_Name', trim: false),
   string (defaultValue: '', description: 'Please type Backup URL', name: 'Backup_URL', trim: false),
   string (defaultValue: '', description: 'Please type SNS ARN', name: 'SNS_ARN', trim: false),
-  booleanParam(name: 'autoApprove', defaultValue: false, description: 'Automatically run apply after generating plan?')
+  
  
   
   
