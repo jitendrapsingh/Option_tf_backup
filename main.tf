@@ -5,7 +5,6 @@
 #    region = "eu-west-1"
 #   }
 #  }
-
 resource "aws_backup_vault" "testvault" {
   name        = var.VAULT_NAME
   }
